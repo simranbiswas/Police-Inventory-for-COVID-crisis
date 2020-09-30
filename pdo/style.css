@@ -1,0 +1,110 @@
+ html{
+      height: 100%;
+ }
+ body{
+     background-image: linear-gradient(to top, #a2f3f2, #eaf7ff, #ffffff);
+     height: 100%;
+
+     background-position: center;
+     background-repeat: no-repeat;
+     margin: 0;
+     background-attachment: fixed;
+ }
+#log {
+     text-align: center;
+     font-size: 30px;
+     font-family: 'Raleway', sans-serif;
+
+}
+
+#ind{
+     font-family: 'Raleway', sans-serif;
+}
+#ind h1{
+     text-align: center;
+     font-size:35px;
+     margin-bottom: 20px;
+     margin-top: 20px;
+}
+#ind img{
+display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: 300px;
+  width: 300px;
+}
+#info{
+    font-family: 'Special Elite', cursive;
+    font-style: bold;
+    text-align: center;
+    font-size: 40px;
+}
+
+#login img{
+display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: 100px;
+  width: 100px;
+  margin-top: 10px;
+}
+#login p{
+    font-family: 'Special Elite', cursive;
+    font-style: bold;
+    text-align: center;
+    font-size: 15px;
+}
+#login {
+    font-family: 'Raleway', sans-serif;
+    font-size: 20px;
+}
+.table{
+     font-size: 15px;
+     margin-left: auto;
+     margin-right: auto;
+     border-radius: 5px;
+     float: none;
+     font-family: 'Raleway', sans-serif;
+
+}
+.table td,th,tr{
+     text-align: center;
+}
+#view{
+     font-size: 15px;
+     font-family: 'Raleway', sans-serif;
+
+}
+#edit{
+     font-size:15px;
+     font-family: 'Raleway', sans-serif;
+}
+#edit .form-control{
+     height:30px; 
+     width: 100px;
+     font-size:15px;
+     font-family: 'Raleway', sans-serif;
+     margin-left: 20px;
+}
+#addd{
+     font-size:15px;
+     font-family: 'Raleway', sans-serif;
+}
+#addd .form-control{
+     height:30px; 
+     width: 100px;
+     font-size:15px;
+     font-family: 'Raleway', sans-serif;
+     margin-left: 20px;
+}
+#acz{
+     font-size:15px;
+     font-family: 'Raleway', sans-serif;
+}
+#acz .form-control{
+     height:30px; 
+     width: 200px;
+     font-size:15px;
+     font-family: 'Raleway', sans-serif;
+     margin-left: 20px;
+}

@@ -14,6 +14,8 @@ if ($cz) {
 ?>
     <META HTTP-EQUIV="Refresh" CONTENT="0;" URL="http://localhost/hack/cont.php">
 <?php
+    header('Location: cont.php');
+
 } else {
     echo "<font color='red'>Sorry, some error occured";
 }

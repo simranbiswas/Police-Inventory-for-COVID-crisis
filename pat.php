@@ -20,13 +20,14 @@ $result = mysqli_query($conn, $sql);
 
 <body id="view">
     <div class="container">
-            <div class="container h-100" id="login">
-                <img src="pdo/pic.png" alt="Assam Police Logo"><br>
-                <p id="login"></p>
-                <script src="pdo/script.js"></script>
-            </div>
-            <h1>List of Covid-19 Affected Patients</h1><br>
-            <div class="table-responsive">
+        <div class="container h-100" id="login">
+            <img src="pdo/pic.png" alt="Assam Police Logo"><br>
+            <p id="login"></p>
+            <script src="pdo/script.js"></script>
+        </div>
+        <h1>List of Covid-19 Affected Patients</h1><br>
+        <div class="col-12">
+            <div class="row justify-content-center">
                 <table class="table table-striped table-hover">
                     <thead class="thead-dark">
                         <th>Patient-ID</th>
@@ -74,17 +75,18 @@ $result = mysqli_query($conn, $sql);
 
                     ?>
                 </table>
-
             </div>
-            <br>
-            <p><a href="addpat.php">
-                    <h3>Add Data</h3>
-                </a><br>
-                <a href="index.php">
-                    <h3>Done</h3>
-                </a></p>
-
         </div>
+
+        <br>
+        <p><a href="addpat.php">
+                <h3>Add Data</h3>
+            </a><br>
+            <a href="index.php">
+                <h3>Done</h3>
+            </a></p>
+
+    </div>
 
 </body>
 

@@ -1,6 +1,7 @@
 <?php
 
 session_start();
+include "pdo/connection.php";
 
 include 'pdo/pdo_helper.php';
 global $x;
@@ -66,84 +67,88 @@ $result = mysqli_query($conn, $sql);
             while ($rows = mysqli_fetch_array($a)) {
         ?><h2>Record of Crime-ID <?php echo $crime_id; ?></h2>
                 <div class="container">
-                    <br>
-                    <div class="row">
-                        <div class="col-5 col-sm-3">
-                            <h3><b>Accused Details</b></h3>
-                            <p><b>Accused ID:</b> <?php echo $rows['accused_id']; ?></p>
-                            <p><b>Name:</b> <?php echo $rows['name']; ?></p>
-                            <p><b>Age:</b> <?php echo $rows['age']; ?></p>
-                            <p><b>Status:</b> <?php echo $rows['status']; ?></p>
-                            <p><b>Remarks:</b> <?php echo $rows['remarks']; ?></p>
-                        </div>
-                    <?php
-                }
-                while ($rows = mysqli_fetch_array($v)) {
-                    ?>
-                        <div class="col-5 col-sm-3">
-                            <h3><b>Victim Details</b></h3>
-                            <p><b>Victim ID:</b> <?php echo $rows['victim_id']; ?></p>
-                            <p><b>Name:</b> <?php echo $rows['name']; ?></p>
-                            <p><b>Age:</b> <?php echo $rows['age']; ?>&nbsp; <b>Gender:</b> <?php echo $rows['gender']; ?></p>
-                            <p><b>Phone:</b> <?php echo $rows['phone']; ?></p>
-                            <p><b>Remarks:</b> <?php echo $rows['remarks']; ?></p>
-                        </div>
+                    <div id="viewc">
+                        <br>
+                        <div class="row">
+                            <div class="col-5 col-sm-3">
+                                <h3><b>Accused Details</b></h3>
+                                <p><b>Accused ID:</b> <?php echo $rows['accused_id']; ?></p>
+                                <p><b>Name:</b> <?php echo $rows['name']; ?></p>
+                                <p><b>Age:</b> <?php echo $rows['age']; ?></p>
+                                <p><b>Status:</b> <?php echo $rows['status']; ?></p>
+                                <p><b>Remarks:</b> <?php echo $rows['remarks']; ?></p>
+                            </div>
+                        <?php
+                    }
+                    while ($rows = mysqli_fetch_array($v)) {
+                        ?>
+                            <div class="col-5 col-sm-3">
+                                <h3><b>Victim Details</b></h3>
+                                <p><b>Victim ID:</b> <?php echo $rows['victim_id']; ?></p>
+                                <p><b>Name:</b> <?php echo $rows['name']; ?></p>
+                                <p><b>Age:</b> <?php echo $rows['age']; ?>&nbsp; <b>Gender:</b> <?php echo $rows['gender']; ?></p>
+                                <p><b>Phone:</b> <?php echo $rows['phone']; ?></p>
+                                <p><b>Remarks:</b> <?php echo $rows['remarks']; ?></p>
+                            </div>
 
-                    <?php
-                }
-                while ($rows = mysqli_fetch_array($w)) {
-                    ?>
-                        <div class="col-5 col-sm-3">
-                            <h3><b>Witness Details</b></h3>
-                            <p><b>Witness ID:</b> <?php echo $rows['witness_id']; ?></p>
-                            <p><b>Name:</b> <?php echo $rows['name']; ?></p>
-                            <p><b>Phone:</b> <?php echo $rows['phone']; ?></p>
-                            <p><b>Remarks:</b> <?php echo $rows['remarks']; ?></p>
+                        <?php
+                    }
+                    while ($rows = mysqli_fetch_array($w)) {
+                        ?>
+                            <div class="col-5 col-sm-3">
+                                <h3><b>Witness Details</b></h3>
+                                <p><b>Witness ID:</b> <?php echo $rows['witness_id']; ?></p>
+                                <p><b>Name:</b> <?php echo $rows['name']; ?></p>
+                                <p><b>Phone:</b> <?php echo $rows['phone']; ?></p>
+                                <p><b>Remarks:</b> <?php echo $rows['remarks']; ?></p>
+                            </div>
+                        <?php
+                    }
+                    while ($rows = mysqli_fetch_array($c)) {
+                        ?>
+                            <div class="col-5 col-sm-3">
+                                <h3><b>Complainer Details</b></h3>
+                                <p><b>Complainer ID:</b> <?php echo $rows['complainer_id']; ?></p>
+                                <p><b>Name:</b> <?php echo $rows['name']; ?></p>
+                                <p><b>Age:</b> <?php echo $rows['age']; ?>&nbsp; <b>Gender:</b> <?php echo $rows['gender']; ?></p>
+                                <p><b>Phone:</b> <?php echo $rows['phone']; ?></p>
+                                <p><b>Remarks:</b> <?php echo $rows['remarks']; ?></p>
+                            </div>
                         </div>
                     <?php
-                }
-                while ($rows = mysqli_fetch_array($c)) {
+                    }
+                    while ($rows = mysqli_fetch_array($s)) {
                     ?>
-                        <div class="col-5 col-sm-3">
-                            <h3><b>Complainer Details</b></h3>
-                            <p><b>Complainer ID:</b> <?php echo $rows['complainer_id']; ?></p>
-                            <p><b>Name:</b> <?php echo $rows['name']; ?></p>
-                            <p><b>Age:</b> <?php echo $rows['age']; ?>&nbsp; <b>Gender:</b> <?php echo $rows['gender']; ?></p>
-                            <p><b>Phone:</b> <?php echo $rows['phone']; ?></p>
-                            <p><b>Remarks:</b> <?php echo $rows['remarks']; ?></p>
+                        <br>
+                        <div class="row">
+                            <div class="col-5 col-sm-3">
+                                <h3><b>IPC Section</b></h3>
+                                <p><b>Section ID:</b> <?php echo $rows['section_id']; ?></p>
+                                <p><b>Description:</b> <?php echo $rows['description']; ?></p>
+                            </div>
+                        <?php
+                    }
+                    while ($rows = mysqli_fetch_array($o)) {
+                        ?>
+                            <div class="col-5 col-sm-3">
+                                <h3><b>Officer Details</b></h3>
+                                <p><b>Officer ID:</b> <?php echo $rows['officer_id']; ?></p>
+                                <p><b>Name:</b> <?php echo $rows['name']; ?></p>
+                                <p><b>Position:</b> <?php echo $rows['position']; ?></p>
+                                <p><b>Branch:</b> <?php echo $rows['branch']; ?></p>
+                                <p><b>Address:</b> <?php echo $rows['address']; ?></p>
+                            </div>
                         </div>
+                    </div><br>
+                    <div class="row justify-content-center">
+                        <p><a href="viewcrime.php">
+                                <h2>Back</h2>
+                            </a></p>
                     </div>
-                <?php
-                }
-                while ($rows = mysqli_fetch_array($s)) {
-                ?>
-                <br>
-                    <div class="row">
-                        <div class="col-5 col-sm-3">
-                            <h3><b>IPC Section</b></h3>
-                            <p><b>Section ID:</b> <?php echo $rows['section_id']; ?></p>
-                            <p><b>Description:</b> <?php echo $rows['description']; ?></p>
-                        </div>
-                    <?php
-                }
-                while ($rows = mysqli_fetch_array($o)) {
-                    ?>
-                        <div class="col-5 col-sm-3">
-                            <h3><b>Officer Details</b></h3>
-                            <p><b>Officer ID:</b> <?php echo $rows['officer_id']; ?></p>
-                            <p><b>Name:</b> <?php echo $rows['name']; ?></p>
-                            <p><b>Position:</b> <?php echo $rows['position']; ?></p>
-                            <p><b>Branch:</b> <?php echo $rows['branch']; ?></p>
-                            <p><b>Address:</b> <?php echo $rows['address']; ?></p>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <p><a href="viewcrime.php"><h3>Back</h3></a></p>
-                    </div>
-                </div>
+                </div><br><br>
         <?php
+                    }
                 }
-            }
 
         ?>
 
@@ -188,8 +193,12 @@ $result = mysqli_query($conn, $sql);
 
         </div>
 
-        <p><a href="addcrime.php"><h3>Add Data</h3></a><br>
-            <a href="index.php"><h3>Done</h3></a></p>
+        <p><a href="addcrime.php">
+                <h3>Add Data</h3>
+            </a><br>
+            <a href="index.php">
+                <h3>Done</h3>
+            </a></p>
 
     </div>
 

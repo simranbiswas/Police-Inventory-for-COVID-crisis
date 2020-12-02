@@ -4,7 +4,6 @@
  body{
      background-image: linear-gradient(to top, #a2f3f2, #eaf7ff, #ffffff);
      height: 100%;
-
      background-position: center;
      background-repeat: no-repeat;
      margin: 0;
@@ -107,4 +106,43 @@ display: block;
      font-size:15px;
      font-family: 'Raleway', sans-serif;
      margin-left: 20px;
+}
+
+#form{
+     border: 1px solid #f1f0f0;
+     background: #ECE9E6;
+     /* fallback for old browsers */
+     background: -webkit-linear-gradient(to right, #FFFFFF, #ECE9E6);
+     /* Chrome 10-25, Safari 5.1-6 */
+     background: linear-gradient(to right, #FFFFFF, #ECE9E6);
+     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+
+
+
+     padding: 10px;
+     margin-right: 100px;
+     margin-left: 120px;
+     border-radius: 50px;
+    box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+    0 12.5px 10px rgba(0, 0, 0, 0.06),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+    0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+    0 100px 80px rgba(0, 0, 0, 0.12);
+
+}
+#viewc{
+      background-color: azure;
+      padding: 10px;
+      margin-right: 100px;
+      margin-left: 120px;
+      border-radius: 50px;
+     box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+     0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+     0 12.5px 10px rgba(0, 0, 0, 0.06),
+     0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+     0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+     0 100px 80px rgba(0, 0, 0, 0.12);
 }

@@ -25,6 +25,8 @@ if ($dc && $da && $dv && $dco && $dw && $ds && $do) {
 ?>
     <meta HTTP-EQUIV="Refresh" CONTENT="0;" URL="http://localhost/hack/viewcrime.php">
 <?php
+    header('Location: viewcrime.php');
+
 } else {
     echo "<font color='red'>Sorry, some error occured";
 }

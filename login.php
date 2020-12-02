@@ -1,5 +1,6 @@
 <?php 
 session_start();
+include "pdo/connection.php";
 
 include 'pdo/pdo_helper.php';
 
@@ -112,7 +113,7 @@ if (isset($_POST['email']) && isset($_POST['pass'])) {
             </div>
         </form>
         <h5>
-            For a password hint, view source and find a password hint in the HTML comments.
+            
             <!-- Hint: The password is the four character of the application
     we are working on (all lower case) followed by 123. -->
         </h5>

@@ -2,6 +2,7 @@
 
 session_start();
 
+include 'pdo/connection.php';
 include 'pdo/pdo_helper.php';
 
 $logged_in = false;
@@ -49,7 +50,7 @@ if (isset($_SESSION['name'])) {
 
 <body>
     <div class="container" id="ind">
-        <h1>Welcome to Assam Police Inventory Management System</h1>
+        <h1>Welcome to Police Inventory Management System for COVID-19 Crisis</h1>
         <?php if (!$logged_in) : ?>
             <img src="pdo/pic.png" alt="Assam Police Logo"><br>
             <p id="info"></p>
@@ -60,7 +61,7 @@ if (isset($_SESSION['name'])) {
 
         <?php else : ?>
             <div class="container h-100" id="login">
-                <img src="pdo/pic.png" alt="Assam Police Logo"><br>
+                <img src="pdo/pic.png" alt=" Police Logo"><br>
                 <p id="login"></p>
                 <script src="pdo/script.js"></script>
             </div>
@@ -124,6 +125,8 @@ if (isset($_SESSION['name'])) {
                 <a href="logout.php">Logout</a>
             </p>
         <?php endif; ?>
+        <h1>8591 - 8597 - 8602</h1>
+
     </div>
 </body>
 

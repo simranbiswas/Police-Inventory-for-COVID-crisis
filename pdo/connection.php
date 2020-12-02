@@ -1,6 +1,6 @@
 <?php
 
-$conn = mysqli_connect("localhost", "root", "sim#0729#", "assam_police");
+$conn = mysqli_connect("localhost", "root", "", "assam_police");
 
 if($conn)
 {

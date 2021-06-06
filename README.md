@@ -6,7 +6,13 @@ Database Management System Project on Police Inventory Management for COVID-19 C
 * The purpose of this website is that during the COVID-19 crisis, it has become difficult for police department to cope up and maintain the records of each and every detail, whether it is patient lists, new hospitals emerging for treatment, cropping of new containments zones due to increasing number of patients etc. 
 * The main factor of maintaining a registry of all the crime records whether they are solved or pending is also resolved in this software. The whole project is implemented using WAMP Stack i.e. the database is hosted on MySQL server and the connection is done using PHP.
 
-# How the project Proceeds:
+## Technology Stack:
+
+* MySQL
+* PHP
+* Apache Server
+
+# Walkthrough:
 
 * The user will be already registered and will put in the login credentials i.e. email and password before getting access to the Inventory. 
 
@@ -37,8 +43,3 @@ Database Management System Project on Police Inventory Management for COVID-19 C
 
 *	Data can be added and edited but not deleted from the hospitals registry.
 
-## Technology Stack:
-
-* MySQL
-* PHP
-* Apache Server
